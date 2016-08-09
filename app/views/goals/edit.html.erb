@@ -20,16 +20,16 @@
   <label >Private goal?</label>
   <input id="private_true" type="radio" name="goal[private]" value="true">
   <label for="private_true">True</label>
-  <input id="private_false" type="radio" name="goal[private]" value="false">
+  <input id="private_false" type="radio" name="goal[private]" value="false" <%="checked"%>  >
   <label for="private_false">False</label>
 
 </br>
 
   <label for="completion">Completed?</label>
   <select id="completion" name="goal[completed]">
-    <option value=""></option>
-    <option value="true">True</option>
-    <option value="false">False</option>
+    <option  value=""></option>
+    <option  value="true">True</option>
+    <option <%="selected"%>  value="false" >False</option>
   </select>
 
   <input type="submit" value="Submit Goal!!!">
