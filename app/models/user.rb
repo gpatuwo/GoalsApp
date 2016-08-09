@@ -12,6 +12,8 @@
 
 class User < ActiveRecord::Base
 
+  has_many :goals
+
   validates :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :name, uniqueness: true, presence: true

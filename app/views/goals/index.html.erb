@@ -1,1 +1,12 @@
 <h1>Goals</h1>
+
+<% @goals.each do |goal| %>
+  <% if goal.private %>
+    <% if logged_in? && current_user.id == goal.user_id%>
+      <%= link_to goal.title, goal_url(goal) %>
+    <% end %>
+  <% else %>
+    <%= link_to goal.title, goal_url(goal) %>
+  <% end %>
+
+<% end %>
